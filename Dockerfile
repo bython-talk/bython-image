@@ -41,8 +41,8 @@ RUN cmake --install .
 FROM lexy-catch2-dev AS bython-dev
 
 WORKDIR /
-RUN apk add --no-cache llvm16-dev clang16-dev clang16-extra-tools clang16-bash-completion \
-    gdb cppcheck
+RUN apk add --no-cache llvm16-dev clang16-dev clang16-extra-tools clang16-bash-completion
+RUN apk add --no-cache gdb cppcheck samurai
 
 ENTRYPOINT [ "/bin/sh" ]
 
